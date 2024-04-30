@@ -5,8 +5,8 @@ tensorboard_logs
 mlruns
 env
 
-*.saved_model
-*.checkpoints
+saved_model
+checkpoints
 *.npz
 *.h5
 *.pb
