@@ -1,21 +1,25 @@
 # Variables
 PYTHON=python3
-SRC_DIR=src
-DATA_DIR=data
 
-# Targets
-.PHONY: all clean train test predict
-
-all: train test predict
-
-train:
-    $(PYTHON) $(SRC_DIR)/train.py --data_dir $(DATA_DIR)
+install:
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 
 test:
-    $(PYTHON) $(SRC_DIR)/test.py --data_dir $(DATA_DIR)
+	python -m pytest -vv --cov=main --cov=mylib test_*.py
 
-predict:
-    $(PYTHON) $(SRC_DIR)/predict.py --data_dir $(DATA_DIR)
+format:	
+	black *.py
 
-clean:
-    rm -rf $(DATA_DIR)/processed
+lint:
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
+
+container-lint:
+	docker run --rm -i hadolint/hadolint < Dockerfile
+
+refactor: format lint
+
+deploy:
+	#deploy goes here
+		
+all: install lint test format deploy
