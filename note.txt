@@ -1,0 +1,3 @@
+conda create -n <ENV_NAME> python=3.8
+
+conda env export > conda_env.yml
