@@ -12,17 +12,16 @@
 # apache-airflow==2.9.0
 
 # MLOps
+# openai
+# tiktoken
+# langchain
+# mlflow==1.29.0
 # gradio==3.4.1
 # streamlit==1.13.0
 # protobuf==3.16.0
 # onnx==1.12.0
-# mlflow==1.29.0
-# databricks==0.2
-# databricks-cli==0.17.3
-# databricks-sql-connector==2.1.0
-# langchain
-# openai
-# tiktoken
+# onnxruntime
+# openvino
 
 # MLOps-HuggingFace
 # transformers==4.22.2
