@@ -22,6 +22,7 @@
 # databricks-sql-connector==2.1.0
 # langchain
 # openai
+# tiktoken
 
 # MLOps-HuggingFace
 # transformers==4.22.2
