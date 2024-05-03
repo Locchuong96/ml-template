@@ -20,6 +20,8 @@
 # databricks==0.2
 # databricks-cli==0.17.3
 # databricks-sql-connector==2.1.0
+# langchain
+# openai
 
 # MLOps-HuggingFace
 # transformers==4.22.2
